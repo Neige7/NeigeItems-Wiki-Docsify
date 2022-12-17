@@ -89,6 +89,6 @@ Example2:
 
 具体调用指令如下
 
-[givePack](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/givepack.md)
+[givePack](zhi-ling/wu-pin-huo-qu/givepack.md)
 
-[dropPack](zhi-ling/zhi-ling-xiang-jie/wu-pin-diao-la/droppack.md)
+[dropPack](zhi-ling/wu-pin-diao-la/droppack.md)

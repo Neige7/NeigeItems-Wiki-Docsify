@@ -18,9 +18,9 @@
 
 遇事不决，/ni save。如果不行，就/ni cover。这是最简单最便捷的快速生成物品配置的方法
 
-[物品保存指令](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/save.md)
+[物品保存指令](zhi-ling/wu-pin-bao-cun/save.md)
 
-[物品覆盖指令](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/cover.md)
+[物品覆盖指令](zhi-ling/wu-pin-bao-cun/cover.md)
 
 某人不看配置不进游戏，草草看过两遍wiki，声称wiki看不懂，被众群友嘲笑良久。
 
