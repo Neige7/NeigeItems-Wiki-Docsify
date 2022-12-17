@@ -1,8 +1,6 @@
----
-description: 相关配置支持解析即时声明变量
----
-
 # NI物品穿戴
+
+> 相关配置支持解析即时声明变量
 
 在MM怪物的配置中添加
 
@@ -14,12 +12,12 @@ NeigeItems:
 
 可用的穿戴位置都有：
 
-* Helmet 代表头部
-* Chestplate 代表胸部
-* Leggings 代表腿部
-* Boots 代表脚部
-* MainHand 代表主手
-* OffHand 代表副手
+* `Helmet` 代表头部
+* `Chestplate` 代表胸部
+* `Leggings` 代表腿部
+* `Boots` 代表脚部
+* `MainHand` 代表主手
+* `OffHand` 代表副手
 
 穿戴概率默认为1
 

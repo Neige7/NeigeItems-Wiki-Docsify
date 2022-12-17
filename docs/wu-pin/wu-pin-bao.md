@@ -2,7 +2,7 @@
 
 ## 路径
 
-所有物品包配置文件应存放于plugins/NeigeItems/ItemPacks文件夹
+所有物品包配置文件应存放于`plugins/NeigeItems/ItemPacks`文件夹
 
 重复 ID 的物品包仍然会被加载，但可能互相覆盖
 

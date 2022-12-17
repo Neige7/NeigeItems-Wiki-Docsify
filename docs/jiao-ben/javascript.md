@@ -14,4 +14,4 @@ NeigeItems 的 JavaScript 节点目前提供以下对象
 
 ## 路径
 
-所有脚本文件应存放于plugins/NeigeItems/Scripts文件夹
+所有脚本文件应存放于`plugins/NeigeItems/Scripts`文件夹

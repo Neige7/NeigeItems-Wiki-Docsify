@@ -5,11 +5,11 @@
 
 - 指令
   - [指令详解](zhi-ling/zhi-ling-xiang-jie/README.md)
-    - [物品动作](zhi-ling/zhi-ling-xiang-jie/wu-pin-dong-zuo/README.md)
+    - 物品动作
       - [action](zhi-ling/zhi-ling-xiang-jie/wu-pin-dong-zuo/action.md)
-    - [物品列表](zhi-ling/zhi-ling-xiang-jie/wu-pin-lie-biao/README.md)
+    - 物品列表
       - [list](zhi-ling/zhi-ling-xiang-jie/wu-pin-lie-biao/list.md)
-    - [物品获取](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/README.md)
+    - 物品获取
       - [get](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/get.md)
       - [give](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/give.md)
       - [givePack](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/givepack.md)
@@ -17,16 +17,16 @@
       - [mm get](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/mm-get.md)
       - [mm give](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/mm-give.md)
       - [mm giveAll](zhi-ling/zhi-ling-xiang-jie/wu-pin-huo-qu/mm-giveall.md)
-    - [物品掉落](zhi-ling/zhi-ling-xiang-jie/wu-pin-diao-la/README.md)
+    - 物品掉落
       - [drop](zhi-ling/zhi-ling-xiang-jie/wu-pin-diao-la/drop.md)
       - [dropPack](zhi-ling/zhi-ling-xiang-jie/wu-pin-diao-la/droppack.md)
-    - [物品保存](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/README.md)
+    - 物品保存
       - [save](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/save.md)
       - [cover](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/cover.md)
       - [mm load](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/mm-load.md)
       - [mm cover](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/mm-cover.md)
       - [mm loadAll](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/mm-loadall.md)
-    - [杂项](zhi-ling/zhi-ling-xiang-jie/za-xiang/README.md)
+    - 杂项
       - [reload](zhi-ling/zhi-ling-xiang-jie/za-xiang/reload.md)
       - [help](zhi-ling/zhi-ling-xiang-jie/za-xiang/help.md)
 
@@ -64,7 +64,7 @@
     - [Gaussian节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian/gaussian-jie-dian.md)
     - [公式节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian/gong-shi-jie-dian.md)
     - [权重节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian/quan-zhong-jie-dian.md)
-    - [papi节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian/papi-jie-dian.md)
+    - [PAPI节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian/papi-jie-dian.md)
     - [Javascript节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian/javascript-jie-dian.md)
     - [继承节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian/ji-cheng-jie-dian.md)
   - [自定义节点](sui-ji-jie-dian/zi-ding-yi-jie-dian.md)
@@ -76,7 +76,7 @@
   - [JavaScript](jiao-ben/javascript.md)
 
 - 插件适配
-  - [MythicMobs](cha-jian-shi-pei/mythicmobs/README.md)
+  - MythicMobs
     - [NI物品掉落](cha-jian-shi-pei/mythicmobs/ni-wu-pin-diao-la/README.md)
       - [多彩掉落](cha-jian-shi-pei/mythicmobs/ni-wu-pin-diao-la/duo-cai-diao-la.md)
     - [NI物品穿戴](cha-jian-shi-pei/mythicmobs/ni-wu-pin-chuan-dai/README.md)

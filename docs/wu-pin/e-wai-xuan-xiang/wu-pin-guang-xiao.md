@@ -7,7 +7,7 @@ ExampleItem:
     color: GOLD
 ```
 
-![](../../.gitbook/assets/image.png)
+![](_images/物品光效.png)
 
 此选项可以使掉落物产生发光效果
 

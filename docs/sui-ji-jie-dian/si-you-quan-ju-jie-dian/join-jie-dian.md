@@ -19,13 +19,13 @@
 
 简介: 将list中的多段文本连接成一段文本
 
-* list 待操作的列表
-* separator 分隔符 (默认为", ")
-* prefix 前缀 (默认无前缀)
-* postfix 后缀 (默认无后缀)
-* limit 限制列表长度
-* truncated 超过长度的部分用该符号代替 (默认直接吞掉超过长度的部分)
-* transform 对列表的每一行进行一些操作 (使用javascript函数)
+* `list` 待操作的列表
+* `separator` 分隔符 (默认为", ")
+* `prefix` 前缀 (默认无前缀)
+* `postfix` 后缀 (默认无后缀)
+* `limit` 限制列表长度
+* `truncated` 超过长度的部分用该符号代替 (默认直接吞掉超过长度的部分)
+* `transform` 对列表的每一行进行一些操作 (使用javascript函数)
 
 示例中的节点将返回:
 

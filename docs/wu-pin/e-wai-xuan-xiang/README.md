@@ -1,6 +1,6 @@
 # 额外选项
 
-以默认配置为例:&#x20;
+以默认配置为例:
 
 ```
 ExampleItem4:
@@ -12,9 +12,3 @@ ExampleItem4:
 ```
 
 options下的所有配置项, 即为"额外选项"
-
-以下为所有额外选项列表:&#x20;
-
-{% content-ref url="shi-yong-ci-shu.md" %}
-[shi-yong-ci-shu.md](shi-yong-ci-shu.md)
-{% endcontent-ref %}

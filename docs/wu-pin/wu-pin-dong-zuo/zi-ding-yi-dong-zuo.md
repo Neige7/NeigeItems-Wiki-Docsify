@@ -2,7 +2,7 @@
 
 自定义动作需要一定的 javascript 和 java 基础。
 
-自定义动作文件存放于 NeigeItems/CustomSections 文件夹
+自定义动作文件存放于`NeigeItems/CustomSections`文件夹
 
 下面是示例配置
 

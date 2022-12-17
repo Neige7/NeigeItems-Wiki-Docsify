@@ -10,22 +10,16 @@
 
 ## 变量列表
 
-`%neigeitems_charge%` 物品当前剩余使用次数
+* `%neigeitems_charge%` 物品当前剩余使用次数
 
-`%neigeitems_maxCharge%` 物品最大使用次数
-
-
-
-`%neigeitems_nbt_XXXXX%` 物品对应NBT的值
-
-例：`%neigeitems_nbt_NeigeItems%`
-
-&#x20;      `%neigeitems_nbt_NeigeItems.id%`
+* `%neigeitems_maxCharge%` 物品最大使用次数
 
 
 
-`%neigeitems_nbtnumber_保留小数位数_XXXXXX%` 物品对应NBT的值(进行取整)
+* `%neigeitems_nbt_XXXXX%` 物品对应NBT的值
 
-例：`%neigeitems_nbtnumber_0_NeigeItems.hashCode%`&#x20;
+    例：`%neigeitems_nbt_NeigeItems.id%`
 
-&#x20;      `%neigeitems_nbtnumber_1_NeigeItems.hashCode%`
+* `%neigeitems_nbtnumber_保留小数位数_XXXXXX%` 物品对应NBT的值(进行取整)
+
+    例：`%neigeitems_nbtnumber_0_NeigeItems.hashCode%`

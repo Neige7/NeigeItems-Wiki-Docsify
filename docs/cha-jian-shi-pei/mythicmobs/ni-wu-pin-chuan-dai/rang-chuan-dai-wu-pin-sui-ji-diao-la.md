@@ -1,8 +1,6 @@
----
-description: 相关配置支持解析即时声明变量
----
-
 # 让穿戴物品随机掉落
+
+> 相关配置支持解析即时声明变量
 
 众所周知MM不能直接让怪物穿戴的装备掉落
 
@@ -22,12 +20,12 @@ NeigeItems:
 
 可用的掉落位置都有：
 
-* Helmet 代表头部
-* Chestplate 代表胸部
-* Leggings 代表腿部
-* Boots 代表脚部
-* MainHand 代表主手
-* OffHand 代表副手
+* `Helmet` 代表头部
+* `Chestplate` 代表胸部
+* `Leggings` 代表腿部
+* `Boots` 代表脚部
+* `MainHand` 代表主手
+* `OffHand` 代表副手
 
 掉落概率默认为1
 

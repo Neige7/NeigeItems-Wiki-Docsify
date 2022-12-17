@@ -1,8 +1,8 @@
-# 物品配置
+物品配置
 
 ## 路径
 
-所有物品配置文件应存放于plugins/NeigeItems/Items文件夹
+所有物品配置文件应存放于`plugins/NeigeItems/Items`文件夹
 
 重复 ID 的物品仍然会被加载，但可能互相覆盖
 
@@ -10,11 +10,7 @@
 
 ## 配置
 
-详见默认配置
-
-{% content-ref url="../../kai-shi/mo-ren-pei-zhi.md" %}
-[mo-ren-pei-zhi.md](../../kai-shi/mo-ren-pei-zhi.md)
-{% endcontent-ref %}
+详见[默认配置](kai-shi/mo-ren-pei-zhi.md)
 
 ## 编写你的物品
 
@@ -22,13 +18,9 @@
 
 遇事不决，/ni save。如果不行，就/ni cover。这是最简单最便捷的快速生成物品配置的方法
 
-{% content-ref url="../../zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/save.md" %}
-[save.md](../../zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/save.md)
-{% endcontent-ref %}
+[物品保存指令](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/save.md)
 
-{% content-ref url="../../zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/cover.md" %}
-[cover.md](../../zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/cover.md)
-{% endcontent-ref %}
+[物品覆盖指令](zhi-ling/zhi-ling-xiang-jie/wu-pin-bao-cun/cover.md)
 
 某人不看配置不进游戏，草草看过两遍wiki，声称wiki看不懂，被众群友嘲笑良久。
 
@@ -57,17 +49,19 @@
 
 ID都有哪些，见下方链接
 
-{% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html" %}
+https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
 
 如果你看着 ID 不知道它对应什么物品。。。
 
-一般来讲，你可以在游戏中同时按下 F3+H，启用高级显示框，这样物品下方就会出现对应的ID。![](../../.gitbook/assets/高级提示框.png)
+一般来讲，你可以在游戏中同时按下 F3+H，启用高级显示框，这样物品下方就会出现对应的ID。
 
-如上图所示，minecraft:stone 对应 STONE
+![](_images/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E6%A1%86.png)
+
+如上图所示，`minecraft:stone` 对应 `STONE`
 
 对于 mod 物品，前缀不能省略。
 
-比如一个名称为mod:test的物品，对应的 ID 应为 MOD\_TEST
+比如一个名称为`mod:test`的物品，对应的 ID 应为 `MOD_TEST`
 
 但是啊但是，你有没有看上面啊？
 
@@ -102,7 +96,7 @@ ID都有哪些，见下方链接
 
 比如 WOOL 是白色羊毛，而子ID为 1 的 WOOL 是橙色羊毛。
 
-![](../../.gitbook/assets/子ID.png)
+![](_images/%E5%AD%90ID.png)
 
 对应配置方法如下
 
@@ -145,7 +139,7 @@ ID都有哪些，见下方链接
 
 附魔名称列表，应前往以下链接查看
 
-{% embed url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html" %}
+https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
 
 具体配置方法如下
 
@@ -218,7 +212,7 @@ ID都有哪些，见下方链接
 
 如果你想要以十六进制表示颜色，那么color必须是一个字符串（被引号包裹）
 
-比如，color: '666666' 表示的是十六进制，等价于 color: 6710886
+比如，`color: '666666'` 表示的是十六进制，等价于 `color: 6710886`
 
 ### 自定义NBT
 
@@ -229,7 +223,7 @@ NeigeItems也允许你这样做。
 你可以通过插入自定义NBT，兼容一些基于NBT的插件，比如
 
 ```
-超猛镐子
+超猛镐子:
   material: IRON_PICKAXE
   nbt:
     MMOITEMS_ATTACK_DAMAGE: (Double) 1000000
@@ -237,7 +231,7 @@ NeigeItems也允许你这样做。
 
 如果你装了MMOItems，那这个镐子现在应该有100万攻击力了。
 
-你可能注意到，1000000前面有一个"(Double) "。
+你可能注意到，1000000前面有一个`(Double) `。
 
 这个前缀代表，生成这条NBT的时候，会以 Double 类型生成（写的时候不要忘记括号后面的空格）。
 
@@ -282,21 +276,13 @@ NeigeItems也允许你这样做。
 
 options下面的就是额外选项。
 
-具体内容点击下方跳转
-
-{% content-ref url="../e-wai-xuan-xiang/" %}
-[e-wai-xuan-xiang](../e-wai-xuan-xiang/)
-{% endcontent-ref %}
+具体内容请查看[额外选项](wu-pin/e-wai-xuan-xiang/README.md)
 
 ### 模板继承
 
 你可以让一个配置继承其他配置的部分或全部内容
 
-具体内容点击下方跳转
-
-{% content-ref url="mo-ban-ji-cheng.md" %}
-[mo-ban-ji-cheng.md](mo-ban-ji-cheng.md)
-{% endcontent-ref %}
+具体内容请查看[模板继承](wu-pin/wu-pin-pei-zhi/mo-ban-ji-cheng.md)
 
 ### 随机节点
 
@@ -317,11 +303,7 @@ options下面的就是额外选项。
       - 1::名字5
 ```
 
-有关私有节点的各个类型，具体查看
-
-{% content-ref url="../../sui-ji-jie-dian/si-you-quan-ju-jie-dian/" %}
-[si-you-quan-ju-jie-dian](../../sui-ji-jie-dian/si-you-quan-ju-jie-dian/)
-{% endcontent-ref %}
+有关私有节点的各个类型，具体请查看[私有/全局节点](sui-ji-jie-dian/si-you-quan-ju-jie-dian/README.md)
 
 ### 全局节点引用
 

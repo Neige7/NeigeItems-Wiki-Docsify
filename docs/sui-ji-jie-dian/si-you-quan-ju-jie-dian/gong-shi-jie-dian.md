@@ -9,7 +9,7 @@
   fixed: 3
 ```
 
-* formula 待计算公式，支持代入节点及PAPI变量
-* min 结果的最小值
-* max 结果的最大值
-* fixed 小数保留位数
+* `formula` 待计算公式，支持代入节点及PAPI变量
+* `min` 结果的最小值
+* `max` 结果的最大值
+* `fixed` 小数保留位数
