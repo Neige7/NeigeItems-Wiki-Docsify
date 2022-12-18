@@ -41,7 +41,7 @@ string节点将在各参数中随机返回一个
 
 关于Gaussian节点的详细介绍请看:
 
-[Gaussian节点](sui-ji-jie-dian/si-you-quan-ju-jie-dian/gaussian-jie-dian.md)
+[Gaussian节点](sui-ji-jie-dian/si-you-quan-ju-jie-dian?id=gaussian节点)
 
 ## 公式节点
 

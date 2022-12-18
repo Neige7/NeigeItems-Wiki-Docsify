@@ -54,4 +54,4 @@ test1:
         type: random
 ```
 
-![](../../../.gitbook/assets/多彩掉落.gif)
+![](_images/%E5%A4%9A%E5%BD%A9%E6%8E%89%E8%90%BD.gif)

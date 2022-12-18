@@ -18,9 +18,9 @@
 
 遇事不决，/ni save。如果不行，就/ni cover。这是最简单最便捷的快速生成物品配置的方法
 
-[物品保存指令](zhi-ling/wu-pin-bao-cun/save.md)
+[物品保存指令](zhi-ling/wu-pin-bao-cun?id=save)
 
-[物品覆盖指令](zhi-ling/wu-pin-bao-cun/cover.md)
+[物品覆盖指令](zhi-ling/wu-pin-bao-cun?id=cover)
 
 某人不看配置不进游戏，草草看过两遍wiki，声称wiki看不懂，被众群友嘲笑良久。
 
@@ -276,7 +276,7 @@ NeigeItems也允许你这样做。
 
 options下面的就是额外选项。
 
-具体内容请查看[额外选项](wu-pin/e-wai-xuan-xiang/README.md)
+具体内容请查看[额外选项](wu-pin/e-wai-xuan-xiang.md)
 
 ### 模板继承
 
@@ -303,7 +303,7 @@ options下面的就是额外选项。
       - 1::名字5
 ```
 
-有关私有节点的各个类型，具体请查看[私有/全局节点](sui-ji-jie-dian/si-you-quan-ju-jie-dian/README.md)
+有关私有节点的各个类型，具体请查看[私有/全局节点](sui-ji-jie-dian/si-you-quan-ju-jie-dian.md)
 
 ### 全局节点引用
 
