@@ -345,6 +345,8 @@ ownerTest:
 CustomAction:
   all:
   - "test"
+  
+# 物品时限测试
 itemTimeTest:
   material: STONE
   name: 限时物品-到期时间-<js::ItemTime.js::main_<itemtime>>
@@ -352,6 +354,234 @@ itemTimeTest:
     itemtime: <itemtime>
   sections:
     itemtime: 60
+    
+# join节点测试
+JoinTest1:
+  material: STONE
+  lore:
+    # 结果: 1, 2, 3, 4, 5
+    - 'join节点: <test>'
+  sections:
+    test:
+      type: join
+      # 待操作的列表
+      list:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+JoinTest2:
+  material: STONE
+  lore:
+    # 结果: 1-2-3-4-5
+    - 'join节点: <test>'
+  sections:
+    test:
+      type: join
+      list:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      # 分隔符(默认为", )
+      separator: "-"
+JoinTest3:
+  material: STONE
+  lore:
+    # 结果: <1, 2, 3, 4, 5>
+    - 'join节点: <test>'
+  sections:
+    test:
+      type: join
+      list:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      # 前缀
+      prefix: "<"
+      # 后缀
+      postfix: ">"
+JoinTest4:
+  material: STONE
+  lore:
+    # 结果: 1, 2, 3
+    - 'join节点: <test>'
+  sections:
+    test:
+      type: join
+      list:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      # 限制长度
+      limit: 3
+JoinTest5:
+  material: STONE
+  lore:
+    # 结果: 1, 2, 3, ...
+    - 'join节点: <test>'
+  sections:
+    test:
+      type: join
+      list:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      limit: 3
+      # 超过长度的部分用该符号代替
+      truncated: "..."
+JoinTest6:
+  material: STONE
+  lore:
+    # 结果: 2, 3, 4, 5, 6
+    - 'join节点: <test>'
+  sections:
+    test:
+      type: join
+      list:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      # 对列表中的每个元素进行一定操作
+      # this.it代表当前元素
+      # this.index代表当前序号(0代表第一个, 1代表第二个, 以此类推)
+      # this.player代表玩家
+      # this.vars(String string)用于解析节点
+      # List<String> this.list代表节点中的list
+      transform: |-
+        // 尝试将当前元素转换为整数, 并加一, 然后保留整数
+        return (parseInt(this.it) + 1).toFixed(0)
+JoinTest7:
+  material: STONE
+  lore:
+    # 等同于:
+    # - 第一行
+    # - 第二行
+    # - 第三行
+    #
+    # 这个节点应该单独占据一行
+    # 不要在这行写其他文本(比如'join节点: <test>')
+    # 具体请自行测试
+    - '<test>'
+  sections:
+    test:
+      type: join
+      list:
+        - 第一行
+        - 第二行
+        - 第三行
+      # 像下面这样写分隔符、前缀和后缀
+      # 即可达到调用多行lore的效果
+      separator: "\\n"
+      prefix: '"'
+      postfix: '"'
+
+GaussianTest:
+  material: STONE
+  lore:
+  - '随机数: <test>'
+  # <gaussian::基础数值_浮动单位_浮动范围上限_取整位数(默认为1, 可省略)_数值下限(可省略)_数值上限(可省略)>
+  - '随机数: <gaussian::100_0.1_0.5_1>'
+  sections:
+    test:
+      type: gaussian
+      # 基础数值
+      base: 100
+      # 浮动单位
+      spread: 0.1
+      # 浮动范围上限
+      maxSpread: 0.5
+      # 取整位数(默认为1)
+      fixed: 1
+      # 数值下限
+      min: 0
+      # 数值上限
+      max: 10000
+
+# 不使用js的操作形式
+RepeatTest1:
+  material: STONE
+  lore:
+    # 结果: 形似&4||||||||||||||&f||||||, &f出现的位置随机
+    - 'repeat节点: &4<repeat1>&f<repeat2>'
+  sections:
+    repeat1:
+      type: repeat
+      content: "|"
+      repeat: <number>
+    repeat2:
+      type: repeat
+      content: "|"
+      repeat: <calculation::20-<number>>
+    number:
+      type: number
+      min: 0
+      max: 20
+      fixed: 0
+# 使用js的操作形式
+RepeatTest2:
+  material: STONE
+  lore:
+    # 结果: 形似&4||||||||||||||&f||||||, &f出现的位置随机
+    - 'repeat节点: <repeat>'
+  sections:
+    repeat:
+      type: repeat
+      content: "|"
+      repeat: 20
+      prefix: "&4"
+      # 对列表中的每个元素进行一定操作
+      # this.it代表content
+      # this.index代表当前序号(0代表第一个, 1代表第二个, 以此类推)
+      # this.player代表玩家
+      # this.vars(String string)用于解析节点
+      transform: |-
+        if (this.index == this.vars("<number>")) {
+            return "&f" + this.it
+        } else {
+            return this.it
+        }
+    number:
+      type: number
+      min: 0
+      max: 20
+      fixed: 0
+RepeatTest3:
+  material: STONE
+  lore:
+  # 随机1-4行"&4&l<红宝石槽>"
+    - '<repeat>'
+  sections:
+    repeat:
+      type: repeat
+      content: '&4&l<红宝石槽>'
+      repeat: <number::1_4_0>
+      # 像下面这样写分隔符、前缀和后缀
+      # 即可达到调用多行lore的效果
+      separator: "\\n"
+      prefix: '"'
+      postfix: '"'
+RepeatTest4:
+  material: STONE
+  lore:
+  # 形似"§4§l<★>-§4§l<★>-§4§l<★>", 随机1-4个
+    - '<repeat>'
+  sections:
+    repeat:
+      type: repeat
+      content: '§4§l<★>'
+      repeat: <number::1_4_0>
+      separator: "-"
 
 ```
 ## Scripts/ExampleScript.js

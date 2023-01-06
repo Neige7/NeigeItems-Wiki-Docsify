@@ -330,6 +330,114 @@ JoinTest7:
       postfix: '"'
 ```
 
+## Repeat节点
+
+```
+节点ID:
+  type: repeat
+  content: '待重复文本'
+  separator: "-"
+  prefix: '<'
+  postfix: '>'
+  repeat: 3
+  transform: |-
+    return this.it + "哈哈"
+```
+
+简介: 将content的文本重复多次, 生成一整段文本
+
+* `content` 待重复文本
+* `separator` 分隔符 (默认无分隔符)
+* `prefix` 前缀 (默认无前缀)
+* `postfix` 后缀 (默认无后缀)
+* `repeat` 重复次数
+* `transform` 每次重复前对文本进行一些操作 (使用javascript函数)
+
+示例中的节点将返回:
+
+```
+<待重复文本-待重复文本-待重复文本>
+```
+
+由于该节点功能较其他节点更加复杂,  因此我为它编写了多个示例配置帮助理解, 如下:
+
+```
+# 不使用js的操作形式
+RepeatTest1:
+  material: STONE
+  lore:
+    # 结果: 形似&4||||||||||||||&f||||||, &f出现的位置随机
+    - 'repeat节点: &4<repeat1>&f<repeat2>'
+  sections:
+    repeat1:
+      type: repeat
+      content: "|"
+      repeat: <number>
+    repeat2:
+      type: repeat
+      content: "|"
+      repeat: <calculation::20-<number>>
+    number:
+      type: number
+      min: 0
+      max: 20
+      fixed: 0
+# 使用js的操作形式
+RepeatTest2:
+  material: STONE
+  lore:
+    # 结果: 形似&4||||||||||||||&f||||||, &f出现的位置随机
+    - 'repeat节点: <repeat>'
+  sections:
+    repeat:
+      type: repeat
+      content: "|"
+      repeat: 20
+      prefix: "&4"
+      # 对列表中的每个元素进行一定操作
+      # this.it代表content
+      # this.index代表当前序号(0代表第一个, 1代表第二个, 以此类推)
+      # this.player代表玩家
+      # this.vars(String string)用于解析节点
+      transform: |-
+        if (this.index == this.vars("<number>")) {
+            return "&f" + this.it
+        } else {
+            return this.it
+        }
+    number:
+      type: number
+      min: 0
+      max: 20
+      fixed: 0
+RepeatTest3:
+  material: STONE
+  lore:
+  # 随机1-4行"&4&l<红宝石槽>"
+    - '<repeat>'
+  sections:
+    repeat:
+      type: repeat
+      content: '&4&l<红宝石槽>'
+      repeat: <number::1_4_0>
+      # 像下面这样写分隔符、前缀和后缀
+      # 即可达到调用多行lore的效果
+      separator: "\\n"
+      prefix: '"'
+      postfix: '"'
+RepeatTest4:
+  material: STONE
+  lore:
+  # 形似"§4§l<★>-§4§l<★>-§4§l<★>", 随机1-4个
+    - '<repeat>'
+  sections:
+    repeat:
+      type: repeat
+      content: '§4§l<★>'
+      repeat: <number::1_4_0>
+      separator: "-"
+```
+
 ## 继承节点
 
 ```
