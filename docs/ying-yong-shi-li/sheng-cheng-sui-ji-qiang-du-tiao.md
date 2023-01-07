@@ -1,0 +1,69 @@
+# 生成随机强度条
+
+## 方法1
+
+```
+强度条测试1:
+  material: STONE
+  lore:
+    - '&4<强度条1>&f<强度条2>'
+  sections:
+    强度条1:
+      type: repeat
+      content: "|"
+      repeat: <number>
+    强度条2:
+      type: repeat
+      content: "|"
+      repeat: <calculation::20-<number>>
+    number:
+      type: number
+      min: 0
+      max: 20
+      fixed: 0
+```
+
+![](_images/强度条测试1.png)
+
+## 方法2
+
+```
+强度条测试2:
+  material: STONE
+  lore:
+    - '<强度条>'
+  sections:
+    强度条:
+      type: repeat
+      content: "|"
+      repeat: 20
+      prefix: "§4"
+      transform: |-
+        if (this.index == this.vars("<number>")) {
+            return "§f" + this.it
+        } else {
+            return this.it
+        }
+    number:
+      type: number
+      min: 0
+      max: 20
+      fixed: 0
+```
+
+![](_images/强度条测试2.png)
+
+## 值得一提
+
+!> 本段内容较为复杂，如果你没有打破砂锅问到底的闲心，请跳过本部分
+
+> 提问: 你为什么方法1的颜色符号用&，到了方法2里就用§了。你是不是歧视&
+<br />
+<br />回答: 理解过程你可以开debug自己理解一下。
+<br />总的来说，如果用&，换完就变成了
+<br />多行Lore测试1:
+<br />&nbsp;&nbsp;material: STONE
+<br />&nbsp;&nbsp;lore:
+<br />&nbsp;&nbsp;- &4||||||||||||||&f||||||
+<br />没有引号包裹，最前面的那个&4会被识别成yaml语法中的锚点。
+<br />所以用§而不是&

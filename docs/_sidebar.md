@@ -42,3 +42,8 @@
       - [让穿戴物品随机掉落](cha-jian-shi-pei/mythicmobs/ni-wu-pin-chuan-dai/rang-chuan-dai-wu-pin-sui-ji-diao-la.md)
     - [掉落物品触发技能](cha-jian-shi-pei/mythicmobs/diao-la-wu-pin-chu-fa-ji-neng.md)
   - [PlaceholderAPI](cha-jian-shi-pei/placeholderapi.md)
+
+- 应用实例
+  - [通过节点插入多行Lore](ying-yong-shi-li/tong-guo-jie-dian-cha-ru-duo-hang-lore.md)
+  - [生成随机强度条](ying-yong-shi-li/sheng-cheng-sui-ji-qiang-du-tiao.md)
+  - [生成随机数量宝石槽](ying-yong-shi-li/sheng-cheng-sui-ji-shu-liang-bao-shi-cao.md)

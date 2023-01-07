@@ -90,6 +90,21 @@ https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
   - 信我
 ```
 
+你可以通过换行符`\n`换行, 在一行中书写多行lore
+
+值得一提的是, 在yaml语法中, 双引号包裹的`"\n"`才代表换行符
+
+单引号包裹的`'\n'`只代表一段形似`\n`的字符
+
+例:
+
+```
+有Lore的铁剑:
+  material: IRON_SWORD
+  lore:
+  - "我有lore\n我真有lore\n信我"
+```
+
 ### 子ID/损伤值
 
 在 1.12.2 及以下的版本中，某些物品存在“子ID”。
