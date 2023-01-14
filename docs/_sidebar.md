@@ -22,6 +22,7 @@
     - [冷却组](wu-pin/wu-pin-dong-zuo/leng-que-zu.md)
   - [物品编辑函数](wu-pin/wu-pin-bian-ji-han-shu.md)
     - [函数类型](wu-pin/wu-pin-bian-ji-han-shu/han-shu-lei-xing.md)
+    - [自定义函数](wu-pin/wu-pin-bian-ji-han-shu/zi-ding-yi-han-shu.md)
   - [额外选项](wu-pin/e-wai-xuan-xiang.md)
   - [物品变量](wu-pin/wu-pin-bian-liang.md)
   - [物品包](wu-pin/wu-pin-bao.md)
