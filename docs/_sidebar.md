@@ -9,6 +9,7 @@
   - [物品获取](zhi-ling/wu-pin-huo-qu.md)
   - [物品掉落](zhi-ling/wu-pin-diao-la.md)
   - [物品保存](zhi-ling/wu-pin-bao-cun.md)
+  - [物品编辑](zhi-ling/wu-pin-bian-ji.md)
   - [杂项](zhi-ling/za-xiang.md)
 
 - 物品
@@ -19,6 +20,8 @@
     - [动作变量](wu-pin/wu-pin-dong-zuo/dong-zuo-bian-liang.md)
     - [自定义动作](wu-pin/wu-pin-dong-zuo/zi-ding-yi-dong-zuo.md)
     - [冷却组](wu-pin/wu-pin-dong-zuo/leng-que-zu.md)
+  - [物品编辑函数](wu-pin/wu-pin-bian-ji-han-shu.md)
+    - [函数类型](wu-pin/wu-pin-bian-ji-han-shu/han-shu-lei-xing.md.md)
   - [额外选项](wu-pin/e-wai-xuan-xiang.md)
   - [物品变量](wu-pin/wu-pin-bian-liang.md)
   - [物品包](wu-pin/wu-pin-bao.md)
