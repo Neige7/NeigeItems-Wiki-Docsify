@@ -2,13 +2,33 @@
 
 > 节点配置内全面支持节点调用/PAPI调用
 
-## 路径
+## 全局节点路径
 
 所有全局节点配置文件应存放于`plugins/NeigeItems/GlobalSections`文件夹
 
 重复 ID 的节点仍然会被加载，但可能互相覆盖
 
 最后哪个节点活下来。。。随缘了属于是
+
+## 私有节点配置
+
+查看：[私有节点配置](wu-pin/wu-pin-pei-zhi/README.md?id=随机节点)，形如
+
+```
+随机名称的铁剑:
+  material: IRON_SWORD
+  name: <weight-1>
+  sections:
+    weight-1:
+      type: weight
+      values:
+      - 5::名字1
+      - 4::名字2
+      - 3::名字3
+      - 2::名字4
+      - 1::名字5
+```
+
 
 ## 字符串节点
 

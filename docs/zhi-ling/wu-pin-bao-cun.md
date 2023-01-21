@@ -7,7 +7,7 @@
 > /ni save [物品ID] (保存路径) > 将手中物品以对应ID保存至对应路径
 
 * `[物品ID]` 保存后的NI物品ID
-* `(保存路径)` 物品存储的文件路径
+* `(保存路径)` 物品存储的文件路径, 默认为`物品ID.yml`
 
   形如`test.yml`，将存储于`plugins/NeigeItems/Items/test.yml`
 
@@ -18,7 +18,7 @@
 > /ni cover [物品ID] (保存路径) > 将手中物品以对应ID覆盖至对应路径
 
 * `[物品ID]` 保存后的NI物品ID
-* `(保存路径)` 物品存储的文件路径
+* `(保存路径)` 物品存储的文件路径, 默认为`物品ID.yml`
 
   形如`test.yml`，将存储于`plugins/NeigeItems/Items/test.yml`
 

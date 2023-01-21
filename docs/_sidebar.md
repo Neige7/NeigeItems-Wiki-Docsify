@@ -51,3 +51,7 @@
   - [通过节点插入多行Lore](ying-yong-shi-li/tong-guo-jie-dian-cha-ru-duo-hang-lore.md)
   - [生成随机强度条](ying-yong-shi-li/sheng-cheng-sui-ji-qiang-du-tiao.md)
   - [生成随机数量宝石槽](ying-yong-shi-li/sheng-cheng-sui-ji-shu-liang-bao-shi-cao.md)
+
+- 傻逼式教程
+  - [前言](sha-bi-shi-jiao-cheng/qian-yan.md)
+  - [正文](sha-bi-shi-jiao-cheng/zheng-wen.md)
