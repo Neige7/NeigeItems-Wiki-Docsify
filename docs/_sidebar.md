@@ -54,4 +54,5 @@
 
 - 傻逼式教程
   - [前言](sha-bi-shi-jiao-cheng/qian-yan.md)
-  - [正文](sha-bi-shi-jiao-cheng/zheng-wen.md)
+  - [没头脑篇](sha-bi-shi-jiao-cheng/mei-tou-nao-pian.md)
+  - [不高兴篇](sha-bi-shi-jiao-cheng/bu-gao-xing-pian.md)

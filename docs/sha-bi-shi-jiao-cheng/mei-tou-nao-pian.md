@@ -1,6 +1,6 @@
-# 正文
+# 没头脑篇
 
-在正文部分，我将顺序介绍NeigeItems的使用。我将以我个人浅薄的想象力尽量介绍到每个方面，如果你看完还是不懂，请自杀。你可以在网页左侧点击标题进行快速跳转，别寄吧说什么太长翻起来太麻烦，草你妈的。
+没头脑篇对应没有大脑的人，在本节中，我将尽可能将过程详细描述，并辅以图片帮助理解，以尽量写出你能看懂的文字。
 
 ## 插件下载
 
@@ -14,7 +14,7 @@
 
 ### Github自动构建
 
-前往[Github自动构建](https://github.com/Neige7/NeigeItems-Kotlin/actions)下载。首先，你需要登录Github账号。不登录Github账号是下载不了自动构建的。别寄吧问我Github怎么注册，你妈的，这是NeigeItems的wiki，不是他妈Github的wiki，草你妈的。下面，我将通过图片展示自动构建页面：
+前往[Github自动构建](https://github.com/Neige7/NeigeItems-Kotlin/actions)下载。首先，你需要登录Github账号。不登录Github账号是下载不了自动构建的。别寄吧问我Github怎么注册，这是NeigeItems的wiki，不是他妈Github的wiki。下面，我将通过图片展示自动构建页面：
 <br />![](_images/Github-自动构建页面.png)
 <br />画红框的部分，即最上面一条自动构建，就是我们的目标。将鼠标移动到文字上后，我们会惊讶地发现，这行文字可以点击：
 <br />![](_images/Github-点击自动构建.png)
@@ -54,6 +54,7 @@ NeigeItems基于BukkitAPI编写，因此你需要在拥有BukkitAPI的服务端�
 * catserver1.12.2
 
 其中：catserver需要使用较新的版本，旧版本catserver可能导致插件无法加载。
+
 !> 不在此列表的bukkit服务端不一定不能使用NeigeItems，你可以亲自尝试，下一节，我将介绍NeigeItems的安装。
 
 ## 插件安装
@@ -105,45 +106,3 @@ NeigeItems基于BukkitAPI编写，因此你需要在拥有BukkitAPI的服务端�
 <br />我们成功获取了`测试物品`。
 <br />你可以查看[物品获取](zhi-ling/wu-pin-huo-qu.md)了解get、give、giveAll的用法。
 <br />类似的，`/ni give Neige 测试物品`代表给予Neige一个测试物品。
-
-## 随机物品
-
-NeigeItems是一个随机物品库，理应可以写出随机物品。
-<br />我们需要通过NeigeItems中的随机节点达成写出随机物品的目的。
-<br />随机节点分为[私有节点](sui-ji-jie-dian/si-you-quan-ju-jie-dian.md)和[即时节点](sui-ji-jie-dian/ji-shi-sheng-ming-jie-dian.md)。由于这些东西我都写过，我直接把链接贴出来，看不懂就自杀吧。
-
-[私有节点配置](wu-pin/wu-pin-pei-zhi/README.md?id=随机节点)
-
-```
-随机名称的铁剑:
-  material: IRON_SWORD
-  name: <weight-1>
-  sections:
-    weight-1:
-      type: weight
-      values:
-      - 5::名字1
-      - 4::名字2
-      - 3::名字3
-      - 2::名字4
-      - 1::名字5
-```
-
-该物品的名字：
-* `5/15`概率为`名字1`
-* `4/15`概率为`名字2`
-* `3/15`概率为`名字3`
-* `2/15`概率为`名字4`
-* `1/15`概率为`名字5`
-
-[即时节点配置](kai-shi/mo-ren-pei-zhi.md?id=itemsexampleitemyml)
-```
-ExampleItem:
-  material: LEATHER_HELMET
-  lore:
-  - '即时声明字符串节点测试: <strings::number-1_weight-1>'
-```
-
-该物品的Lore：
-* `1/2`概率为`即时声明字符串节点测试: number-1`
-* `1/2`概率为`即时声明字符串节点测试: weight-1`
