@@ -2,7 +2,13 @@
 
 ## 需求
 
-1.12.2-1.19 spigot服务端
+1.12.2-1.19.3 bukkit服务端
+
+已测试：
+* paper1.12.2-1.19.3
+* arclight1.16.5
+* spigot1.12.2
+* catserver1.12.2
 
 ## 安装NeigeItems
 

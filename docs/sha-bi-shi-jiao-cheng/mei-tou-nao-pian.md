@@ -50,6 +50,7 @@
 
 NeigeItems基于BukkitAPI编写，因此你需要在拥有BukkitAPI的服务端上使用本插件。至本段wiki撰写时，以下服务端通过了用户测试：
 * paper1.12.2-1.19.3
+* arclight1.16.5
 * spigot1.12.2
 * catserver1.12.2
 

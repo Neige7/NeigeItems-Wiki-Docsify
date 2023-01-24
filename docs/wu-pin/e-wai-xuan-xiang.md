@@ -91,7 +91,7 @@ ownerTest:
 
 上述物品通过/ni drop或击杀MM怪物掉落该物品, 该物品首次拾取只能由Neige完成
 
-你可以将owner填写为%player\_name%, 这样就是谁击杀就属于谁了
+你可以将owner填写为"%player\_name%", 这样就是谁击杀就属于谁了
 
 首次拾取后将不再有掉落物归属效果
 
