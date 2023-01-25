@@ -9,24 +9,39 @@ Main:
   # 是否开启debug模式
   Debug: false
 Messages:
+  # 一些消息的提示类型
+  type:
+    # Pack/Items
+    # 给予物品包是发送物品包提示还是发送所有物品提示
+    givePackMessage: Pack
   # 玩家不在线提示
   invalidPlayer: §e[NI] §6玩家不在线或不存在
   # 给予成功提示
   successInfo: §e[NI] §6成功给予 §f{player} §a{amount} §6个 §f{name}
-  # 被给予成功提示(设置为""则不进行提示)
+  # 被给予成功提示
   givenInfo: §e[NI] §6你得到了 §a{amount} §6个 §f{name}
+  # 给予物品包成功提示
+  successPackInfo: §e[NI] §6成功给予 §f{player} §a{amount} §6个 §f{name} §6物品包
+  # 被给予成功物品包提示
+  givenPackInfo: §e[NI] §6你得到了 §a{amount} §6个 §f{name} §6物品包
   # 给予成功提示
   dropSuccessInfo: §e[NI] §6成功在 §a{world} §6的 §a{x},{y},{z} §6掉落了 §a{amount} §6个 §f{name}
   # 未知物品提示
   unknownItem: §e[NI] §6找不到ID为 §a{itemID} §6的物品
+  # 未知物品包提示
+  unknownItemPack: §e[NI] §6找不到ID为 §a{packID} §6的物品包
   # 对应ID物品已存在提示
   existedKey: §e[NI] §6已存在ID为 §a{itemID} §6的物品
   # 未知解析对象提示
-  invalidPaser: §e[NI] §6不能针对后台解析物品, 请指定一个玩家
+  invalidParser: §e[NI] §6不能针对后台解析物品, 请指定一个玩家
+  # 错误发送者提示
+  onlyPlayer: §e[NI] §6该指令仅可玩家使用
   # 保存成功提示
   successSaveInfo: §e[NI] §6成功将 §f{name} §6以ID §a{itemID} §6保存至 §a{path}
   # MM物品转换完毕提示
-  mMImportSuccessInfo: §e[NI] §6成功将所有MM物品保存至 §a{path}
+  mmImportSuccessInfo: §e[NI] §6成功将所有MM物品保存至 §a{path}
+  # 物品到期删除提示
+  itemExpirationMessage: §e[NI] §6你背包中的 §f{itemName} §6已到期删除
   # 物品列表内, 点击获取物品提示
   clickGiveMessage: §e点击获取该物品
   # 不要保存空气提示
@@ -40,19 +55,23 @@ Messages:
   # 权限不足提示
   insufficientPermissions: §e[NI] §6权限不足
   # 未发现前置插件提示
-  invalidPlugin: §e[NI] §6未发现前置插件: {plugin}
+  invalidPlugin: '§e[NI] §6未发现前置插件: {plugin}'
   # 物品冷却提示
   itemCooldown: §e物品冷却中! 请等待{time}秒
   # 重载完毕提示
   reloadedMessage: §e[NI] §6重载完毕
   # 无效NBT提示
   invalidNBT: §6[NI] §cNBT加载失败, 请勿在列表型NBT中混用键值对, 数字及字符串
+  # MM生物穿戴物品失败提示
+  equipFailed: §e[NI] §6在尝试给ID为 §f{mobID}§6 的MM怪物穿戴ID为 §f{itemID}§6 的NI物品时发生了错误.
   # 错误物品提示
   invalidItem: '§6[NI] §c物品加载失败, 物品可能缺损数据, 物品ID: §6{itemID}'
   # 给予失败提示
   failureInfo: '§e[NI] §6物品给予失败, 可能原因: 物品未配置材质/玩家已下线'
   # 缺少前置插件提示
   invalidPlugin: '§e[NI] §6未发现前置插件: {plugin}'
+  # 位置物品材质提示
+  invalidMaterial: '§e[NI] §6物品 {itemID} 使用了未知的材质 {material}'
   # 未指定物品解析对象提示
   invalidParser: §e[NI] §6不能针对后台解析物品, 请指定一个玩家
   # 物品冷却提示
@@ -61,27 +80,80 @@ Messages:
   clickGiveMessage: §e点击获取该物品
   # 掉落物归属提示信息
   invalidOwnerMessage: §6无法拾取该物品, 该物品的拥有者是 §f{name}
-  # 帮助信息
-  helpMessages:
-  - §6====================§eNeigeItems§6====================
-  - §6==================[]为必填, ()为选填==================
-  - §e/ni §flist (页码) §7> 查看所有NI物品
-  - §e/ni §fget [物品ID] (数量) (是否反复随机) (指向数据) §7> 根据ID获取NI物品
-  - §e/ni §fgive [玩家ID] [物品ID] (数量) (是否反复随机) (指向数据) §7> 根据ID给予NI物品
-  - §e/ni §fgiveAll [物品ID] (数量) (是否反复随机) (指向数据) §7> 根据ID给予所有人NI物品
-  - §e/ni §fdrop [物品ID] [数量] [世界名] [X坐标] [Y坐标] [Z坐标] (是否反复随机) (物品解析对象) (指向数据) §7>
-    于指定位置掉落NI物品
-  - §e/ni §fsave [物品ID] (保存路径) §7> 将手中物品以对应ID保存至对应路径
-  - §e/ni §fcover [物品ID] (保存路径) §7> 将手中物品以对应ID覆盖至对应路径
-  - §e/ni §fmm load [物品ID] (保存路径) §7> 将对应ID的MM物品保存为NI物品
-  - §e/ni §fmm cover [物品ID] (保存路径) §7> 将对应ID的MM物品覆盖为NI物品
-  - §e/ni §fmm loadAll (保存路径) §7> 将全部MM物品转化为NI物品
-  - §e/ni §fmm get [物品ID] (数量) §7> 根据ID获取MM物品
-  - §e/ni §fmm give [玩家ID] [物品ID] (数量) §7> 根据ID给予MM物品
-  - §e/ni §fmm giveAll [物品ID] (数量) §7> 根据ID给予所有人MM物品
-  - §e/ni §freload §7> 重新加载NI物品
-  - §e/ni §fhelp §7> 查看帮助信息
-  - §6=================================================
+# 指令帮助信息
+Help:
+  prefix: |-
+    §6====================§eNeigeItems§6====================
+    §6==================[]为必填, ()为选填==================
+  suffix: §6================<< §e{prev} §f{current}§e/§f{total} §e{next} §6>>================
+  amount: 10
+  format: "{command} §7> {description}"
+  prev: 上一页
+  next: 下一页
+  commands:
+    action:
+      command: §e/ni §faction [玩家ID] [动作内容]
+      description: 执行NI物品动作
+    edithand:
+      command: §e/ni §fedithand [玩家ID] [物品编辑函数ID] [函数内容]
+      description: 通过对应编辑函数编辑主手物品
+    editoffhand:
+      command: §e/ni §feditoffhand [玩家ID] [物品编辑函数ID] [函数内容]
+      description: 通过对应编辑函数编辑副手物品
+    editslot:
+      command: §e/ni §feditslot [玩家ID] [物品编辑函数ID] [函数内容]
+      description: 通过对应编辑函数编辑对应槽位物品
+    list:
+      command: §e/ni §flist (页码)
+      description: 查看所有NI物品
+    get:
+      command: §e/ni §fget [物品ID] (数量) (是否反复随机) (指向数据)
+      description: 根据ID获取NI物品
+    give:
+      command: §e/ni §fgive [玩家ID] [物品ID] (数量) (是否反复随机) (指向数据)
+      description: 根据ID给予NI物品
+    givePack:
+      command: §e/ni §fgivePack [玩家ID] [物品包ID] (数量)
+      description: 根据ID给予NI物品包
+    giveAll:
+      command: §e/ni §fgiveAll [物品ID] (数量) (是否反复随机) (指向数据)
+      description: 根据ID给予所有人NI物品
+    drop:
+      command: §e/ni §fdrop [物品ID] [数量] [世界名] [X坐标] [Y坐标] [Z坐标] [是否反复随机] [物品解析对象] (指向数据)
+      description: 于指定位置掉落NI物品
+    dropPack:
+      command: §e/ni §fdropPack [物品包ID] [数量] [世界名] [X坐标] [Y坐标] [Z坐标] [物品解析对象]
+      description: 于指定位置掉落NI物品包
+    save:
+      command: §e/ni §fsave [物品ID] (保存路径)
+      description: 将手中物品以对应ID保存至对应路径
+    cover:
+      command: §e/ni §fcover [物品ID] (保存路径)
+      description: 将手中物品以对应ID覆盖至对应路径
+    mm load:
+      command: §e/ni §fmm load [物品ID] (保存路径)
+      description: 将对应ID的MM物品保存为NI物品
+    mm cover:
+      command: §e/ni §fmm cover [物品ID] (保存路径)
+      description: 将对应ID的MM物品覆盖为NI物品
+    mm loadAll:
+      command: §e/ni §fmm loadAll (保存路径)
+      description: 将全部MM物品转化为NI物品
+    mm get:
+      command: §e/ni §fmm get [物品ID] (数量)
+      description: 根据ID获取MM物品
+    mm give:
+      command: §e/ni §fmm give [玩家ID] [物品ID] (数量)
+      description: 根据ID给予MM物品
+    mm giveAll:
+      command: §e/ni §fmm giveAll [物品ID] (数量)
+      description: 根据ID给予所有人MM物品
+    reload:
+      command: §e/ni §freload
+      description: 重新加载NI物品
+    help:
+      command: §e/ni §fhelp
+      description: 查看帮助信息
 # 物品列表格式
 ItemList:
   Prefix: §6===========§eNeigeItems§6===========
@@ -90,6 +162,14 @@ ItemList:
   ItemFormat: §6{index}. §a{ID} §6- §f{name}
   Prev: 上一页
   Next: 下一页
+# 物品拥有者提示信息显示方式
+ItemOwner:
+  # actionbar / message
+  messageType: actionbar
+# 掉落物颜色实现方式(protocol对应protocollib发包, vanilla为原版实现)
+ItemColor:
+  # protocol / vanilla
+  type: protocol
 
 ```
 ## GlobalSections/ExampleSection.yml
