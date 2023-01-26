@@ -134,6 +134,27 @@
 * `max` 结果的最大值
 * `fixed` 小数保留位数
 
+> 公式节点的本质是运行一段javascript代码
+
+## 快速计算节点
+
+```
+节点ID:
+  type: fastcalc
+  formula: 1+2+3<global-number-1>
+  min: 1
+  max: 100
+  fixed: 3
+```
+
+* `formula` 待计算公式，支持代入节点及PAPI变量
+* `min` 结果的最小值
+* `max` 结果的最大值
+* `fixed` 小数保留位数
+
+> 快速计算节点的本质是解析数学符号进行分析计算
+<br />计算速度高于公式节点
+
 ## 权重节点
 
 ```
