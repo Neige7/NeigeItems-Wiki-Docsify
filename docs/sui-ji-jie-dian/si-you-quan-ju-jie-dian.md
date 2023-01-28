@@ -480,6 +480,22 @@ RepeatTest4:
       separator: "-"
 ```
 
+## 渐变色节点
+
+```
+节点ID:
+  type: gradient
+  colorStart: "000000"
+  colorEnd: "FFFFFF"
+  step: 1
+  text: 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+```
+
+* `colorStart` 起始颜色
+* `colorEnd` 结尾颜色
+* `step` 每几个字符变一次颜色(默认为1, 可省略)
+* `text` 文本内容
+
 ## 继承节点
 
 ```

@@ -8,6 +8,7 @@ Main:
   MMItemsPath: MMItems.yml
   # 是否开启debug模式
   Debug: false
+# 将消息设置为""则不进行提示
 Messages:
   # 一些消息的提示类型
   type:
@@ -54,8 +55,6 @@ Messages:
   invalidLocation: §e[NI] §6无效坐标
   # 权限不足提示
   insufficientPermissions: §e[NI] §6权限不足
-  # 未发现前置插件提示
-  invalidPlugin: '§e[NI] §6未发现前置插件: {plugin}'
   # 物品冷却提示
   itemCooldown: §e物品冷却中! 请等待{time}秒
   # 重载完毕提示
@@ -72,14 +71,10 @@ Messages:
   invalidPlugin: '§e[NI] §6未发现前置插件: {plugin}'
   # 位置物品材质提示
   invalidMaterial: '§e[NI] §6物品 {itemID} 使用了未知的材质 {material}'
-  # 未指定物品解析对象提示
-  invalidParser: §e[NI] §6不能针对后台解析物品, 请指定一个玩家
-  # 物品冷却提示
-  itemCooldown: §e物品冷却中! 请等待{time}秒
-  # 物品列表内, 点击获取物品提示
-  clickGiveMessage: §e点击获取该物品
   # 掉落物归属提示信息
   invalidOwnerMessage: §6无法拾取该物品, 该物品的拥有者是 §f{name}
+  # 物品包掉落提示信息
+  dropPackSuccessInfo: §e[NI] §6成功在 §a{world} §6的 §a{x},{y},{z} §6掉落了 §a{amount} §6组 §f{name} 物品包
 # 指令帮助信息
 Help:
   prefix: |-
@@ -164,6 +159,8 @@ ItemList:
   Next: 下一页
 # 物品拥有者提示信息显示方式
 ItemOwner:
+  # 通过/ni get及/ni give获取物品时, 移除物品上的拥有者标签
+  removeNBTWhenGive: false
   # actionbar / message
   messageType: actionbar
 # 掉落物颜色实现方式(protocol对应protocollib发包, vanilla为原版实现)
