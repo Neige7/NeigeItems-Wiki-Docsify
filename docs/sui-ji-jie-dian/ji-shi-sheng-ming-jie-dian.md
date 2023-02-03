@@ -140,6 +140,6 @@ sections:
 <inherit::templateTest>
 ```
 
-其中templateTest有可能返回"text1"，"text2"或"text3"。
+其中`templateTest`有可能返回"text1"，"text2"或"text3"。
 
-即时声明节点"\<inherit::templateTest>"同样有可能返回"text1"，"text2"或"text3"。
+即时声明节点`<inherit::templateTest>`同样有可能返回"text1"，"text2"或"text3"。
