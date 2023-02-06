@@ -20,7 +20,11 @@
 
   形如`{"string-1":"文本文本文本"}`
 
-  这样物品生成时`string-1`的值将变为`文本文本文本`
+  这样物品生成时节点`string-1`的值将变为`文本文本文本`
+
+  形如`{"test1":"test1","test2":"test2"}`
+
+  这样物品生成时节点`test1`的值将变为`test1`, 节点`test2`的值将变为`test2`
 
 ?> 如果你想让MM怪物被玩家击杀后掉落NI物品，你可以直接查看：[NI物品掉落](cha-jian-shi-pei/mythicmobs/ni-wu-pin-diao-la/README.md)
 
