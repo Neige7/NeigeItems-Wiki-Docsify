@@ -543,3 +543,57 @@ inheritTest同样有可能返回"text1"，"text2"或"text3"。
   - 测试字符串3
 ```
 
+## 检查节点
+
+```
+节点ID:
+  type: check
+  value: <test>
+  actions:
+  - 'tell: 23333'
+```
+
+* `value` 待检查内容
+* `actions` 执行动作
+
+value将作为变量传入condition供你判断, 示例配置如下:
+
+```
+CheckTest:
+  material: STONE
+  name: <check>
+  sections:
+    # 待检查的节点, 随机返回test1, test2, test3中的一个值
+    test:
+      type: strings
+      values:
+        - test1
+        - test2
+        - test3
+    check:
+      type: check
+      # 待检查的值
+      value: <test>
+      # 执行动作
+      # 条件中默认导入了value
+      actions:
+          # 如果value为test1
+        - condition: value == "test1"
+          # 通知玩家
+          actions:
+          - "tell: 你得到了名为 test1 的物品"
+          # value不为test1
+          deny:
+            # value为test2
+            condition: value == "test2"
+            # 通知玩家
+            actions:
+            - "tell: 你得到了名为 test2 的物品"
+            # value不为test2
+            deny:
+              # value为test3
+              condition: value == "test3"
+              # 通知玩家
+              actions:
+              - "tell: 你得到了名为 test3 的物品"
+```
