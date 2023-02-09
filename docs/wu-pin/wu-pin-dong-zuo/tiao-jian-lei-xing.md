@@ -23,30 +23,19 @@
 variables["test"] = 1
 ```
 
-## 默认存在的包/类/对象
-
-### 包
-
-`java.io`
-<br />`java.lang`
-<br />`java.math`
-<br />`java.util`
-<br />`java.util.concurrent`
-<br />`java.util.function`
-
-`org.bukkit`
-<br />`org.bukkit.configuration`
-<br />`org.bukkit.configuration.file`
-<br />`org.bukkit.entity`
-<br />`org.bukkit.inventory`
-<br />`org.bukkit.inventory.meta`
-<br />`org.bukkit.scheduler`
-
-`pers.neige.neigeitems.utils`
+## 默认存在的类/对象
 
 ### 类
 
-`pers.neige.neigeitems.manager.HookerManager`
+`java.util.Calendar`
+<br />`java.util.concurrent.ThreadLocalRandom`
+
+`org.bukkit.Bukkit`
+<br />`org.bukkit.ChatColor`
+<br />`org.bukkit.GameMode`
+
+`pers.neige.neigeitems.utils.SectionUtils`
+<br />`pers.neige.neigeitems.manager.HookerManager`
 
 ### 单例
 

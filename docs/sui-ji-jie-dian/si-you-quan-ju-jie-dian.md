@@ -548,7 +548,7 @@ inheritTest同样有可能返回"text1"，"text2"或"text3"。
 ```
 节点ID:
   type: check
-  value: <test>
+  value: 检测内容
   actions:
   - 'tell: 23333'
 ```
@@ -596,4 +596,49 @@ CheckTest:
               # 通知玩家
               actions:
               - "tell: 你得到了名为 test3 的物品"
+```
+
+## When节点
+
+```
+节点ID:
+  type: when
+  value: 1233211234567
+  conditions:
+  - condition: value == 114514
+    result: nb
+  - condition: value > 100
+    result: 狠
+  - "无匹配结果"
+```
+
+* `value` 待检查内容
+* `conditions` 待进行的系列条件匹配
+
+本节点将把value作为变量传入condition, 按照列表顺序进行一系列匹配, 如果条件满足则返回result中的结果
+<br />如果conditions中的某一条没有配置condition, 形如`- "无匹配结果"`, 节点将直接返回`无匹配结果`
+<br />示例配置如下:
+
+```
+WhenTest:
+  material: STONE
+  name: <test> - <when>
+  sections:
+    test: <number::0_100>
+    when:
+      type: when
+      value: <test>
+      conditions:
+      - condition: value < 10
+        result: E
+      - condition: value < 30
+        result: D
+      - condition: value < 50
+        result: C
+      - condition: value < 70
+        result: B
+      - condition: value < 90
+        result: A
+      - condition: value <= 100
+        result: S
 ```
