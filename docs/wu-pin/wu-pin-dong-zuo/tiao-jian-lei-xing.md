@@ -50,11 +50,11 @@ variables["test"] = 1
 
 ### 单例
 
-`pers.neige.neigeitems.manager.ActionManager.INSTANCE`
-<br />`pers.neige.neigeitems.manager.ConfigManager.INSTANCE`
-<br />`pers.neige.neigeitems.manager.ItemEditorManager.INSTANCE`
-<br />`pers.neige.neigeitems.manager.ItemManager.INSTANCE`
-<br />`pers.neige.neigeitems.manager.ItemPackManager.INSTANCE`
+`ActionManager` = `pers.neige.neigeitems.manager.ActionManager.INSTANCE`
+<br />`ConfigManager` = `pers.neige.neigeitems.manager.ConfigManager.INSTANCE`
+<br />`ItemEditorManager` = `pers.neige.neigeitems.manager.ItemEditorManager.INSTANCE`
+<br />`ItemManager` = `pers.neige.neigeitems.manager.ItemManager.INSTANCE`
+<br />`ItemPackManager` = `pers.neige.neigeitems.manager.ItemPackManager.INSTANCE`
 
 ### 对象
 
