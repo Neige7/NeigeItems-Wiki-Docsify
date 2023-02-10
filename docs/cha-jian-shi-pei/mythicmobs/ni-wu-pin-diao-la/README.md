@@ -11,7 +11,7 @@ NeigeItems:
   - 物品ID 随机最低数量-随机最高数量 掉落概率 是否重复随机 指向数据 
 ```
 
-物品ID可以是NI物品ID或者MM物品ID，优先检测NI物品
+物品ID可以是NI物品ID或者MM物品ID、EasyItem物品ID，优先检测NI物品
 
 随机最低数量-随机最高数量 可以直接写数量
 
@@ -29,21 +29,21 @@ test1:
   Health: 1
   NeigeItems:
     Drops:
-    # 50%掉落1-5个ID为"itemId"的NI物品(或MM物品)
+    # 50%掉落1-5个ID为"itemId"的NI物品(或MM物品、EasyItem物品)
     - itemId 1-5 0.5
 test2:
   Type: ZOMBIE
   Health: 1
   NeigeItems:
     Drops:
-    # 50%掉落1个ID为"itemId"的NI物品(或MM物品)
+    # 50%掉落1个ID为"itemId"的NI物品(或MM物品、EasyItem物品)
     - itemId 1 0.5
 test3:
   Type: ZOMBIE
   Health: 1
   NeigeItems:
     Drops:
-    # 掉落5个ID为"itemId"的NI物品(或MM物品)
+    # 掉落5个ID为"itemId"的NI物品(或MM物品、EasyItem物品)
     - itemId 5
 ```
 
@@ -55,7 +55,7 @@ test4:
   Health: 1
   NeigeItems:
     Drops:
-    # 掉落玩家等级数量的ID为"itemId"的NI物品(或MM物品)
+    # 掉落玩家等级数量的ID为"itemId"的NI物品(或MM物品、EasyItem物品)
     - itemId <papi::player_level>
 ```
 

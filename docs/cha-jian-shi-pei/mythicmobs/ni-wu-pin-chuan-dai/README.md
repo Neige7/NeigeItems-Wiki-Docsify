@@ -10,6 +10,8 @@ NeigeItems:
   - 穿戴位置: 物品ID 穿戴概率 指向数据 
 ```
 
+物品ID可以是NI物品ID、MM物品ID或EasyItem物品ID
+
 可用的穿戴位置都有：
 
 * `Helmet` 代表头部
@@ -29,9 +31,9 @@ test1:
   Health: 1
   NeigeItems:
     Equipment:
-    # 头部50%几率穿戴ID为"Helmet1"的NI物品
+    # 头部50%几率穿戴ID为"Helmet1"的NI物品(或MM物品、EasyItem物品)
     - 'Helmet: Helmet1 0.5'
-    # 胸部100%几率穿戴ID为"Chestplate1"的NI物品
+    # 胸部100%几率穿戴ID为"Chestplate1"的NI物品(或MM物品、EasyItem物品)
     - 'Chestplate: Chestplate1'
     - 'Leggings: Leggins1 0.5'
     - 'Boots: Boots1 0.5'
