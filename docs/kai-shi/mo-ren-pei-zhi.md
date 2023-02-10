@@ -429,7 +429,7 @@ templateItem3:
   - template2
   name: §f物品继承测试
   sections:
-    damage: 100'
+    damage: 100
 
 inheritSectionTest:
   material: STONE
