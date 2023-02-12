@@ -231,10 +231,10 @@ condition: 'getNBT("test.test") == "666"'
 `getNBTTag`获取的NBT都是ItemTag的形式, 需要你自行转换后对比
 <br />如:
 <br />`getNBTTag("test").asString() == "666"`
-<br />`getNBTTag("test").asDouble() == "666"`
-<br />`getNBTTag("test").asInt() == "666"`
-<br />`getNBTTag("test").asFloat() == "666"`
-<br />`getNBTTag("test").asByte() == "1"`
+<br />`getNBTTag("test").asDouble() == 666`
+<br />`getNBTTag("test").asInt() == 666`
+<br />`getNBTTag("test").asFloat() == 666`
+<br />`getNBTTag("test").asByte() == 1`
 
 ```
 # getNBT获取的NBT值全是转成字符串的
