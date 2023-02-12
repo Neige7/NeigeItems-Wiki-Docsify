@@ -34,7 +34,8 @@ variables["test"] = 1
 <br />`org.bukkit.ChatColor`
 <br />`org.bukkit.GameMode`
 
-`pers.neige.neigeitems.utils.SectionUtils`
+`pers.neige.neigeitems.utils.ItemUtils`
+<br />`pers.neige.neigeitems.utils.SectionUtils`
 <br />`pers.neige.neigeitems.manager.HookerManager`
 
 ### 单例
@@ -196,6 +197,55 @@ condition: 'parseItem("<nbt::test1>") == "666"'
 
 # 检测test1这条data的值是否等于"666"
 condition: 'parseItem("<data::test1>") == "666"'
+```
+
+## 获取指向数据(data)
+
+> 字符串记得用引号包起来
+
+```
+# 当前NI物品名为"test"的节点值是否等于"666"
+condition: 'data["test"] == "666"'
+```
+
+## 获取NBT文本(getNBT)
+
+> 字符串记得用引号包起来
+
+```
+# getNBT获取的NBT值全是转成字符串的
+# 检测test这条NBT的值是否等于"666"
+condition: 'getNBT("test") == "666"'
+
+# 可以用.分隔不同层级的键
+# 当前检测的NBT对应在物品中体现为:
+# test:
+#   test: "666"
+condition: 'getNBT("test.test") == "666"'
+```
+
+## 获取NBT值(getNBTTag)
+
+> 字符串记得用引号包起来
+
+`getNBTTag`获取的NBT都是ItemTag的形式, 需要你自行转换后对比
+<br />如:
+<br />`getNBTTag("test").asString() == "666"`
+<br />`getNBTTag("test").asDouble() == "666"`
+<br />`getNBTTag("test").asInt() == "666"`
+<br />`getNBTTag("test").asFloat() == "666"`
+<br />`getNBTTag("test").asByte() == "1"`
+
+```
+# getNBT获取的NBT值全是转成字符串的
+# 检测test这条NBT的值是否等于"666"
+condition: 'getNBTTag("test").asString() == "666"'
+
+# 可以用.分隔不同层级的键
+# 当前检测的NBT对应在物品中体现为:
+# test:
+#   test: "666"
+condition: 'getNBTTag("test.test").asString() == "666"'
 ```
 
 ## 随机数(random)
