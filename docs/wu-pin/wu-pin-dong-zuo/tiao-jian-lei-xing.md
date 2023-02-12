@@ -58,7 +58,8 @@ variables["test"] = 1
 <br />`itemStack` = `触发物品`
 <br />`itemTag` = `触发物品NBT`
 <br />`event` = `触发事件`
-<br />`variables` = `HashMap<String, Any?>()`
+<br />`variables` = `HashMap<String, Any?>()` 每条condition都是一个单独的variables
+<br />`global` = `HashMap<String, Any?>()` 每套动作(或者说每一次触发)共用一个global
 <br />`value` = `仅存在与check节点: check节点中传入的值`
 
 ## 同时满足(&&)
