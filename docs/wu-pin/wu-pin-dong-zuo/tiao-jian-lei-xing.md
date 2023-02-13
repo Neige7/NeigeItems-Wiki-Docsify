@@ -19,8 +19,15 @@
 
 对此, 我提供了替代方案:
 将变量存放于默认提供的名为`variables`的HashMap如:
+
 ```
 variables["test"] = 1
+```
+
+如果你想让一个变量传递到下一条js动作/condition中, 可以使用global
+
+```
+global["test"] = 1
 ```
 
 ## 默认存在的类/对象
@@ -33,9 +40,18 @@ variables["test"] = 1
 `org.bukkit.Bukkit`
 <br />`org.bukkit.ChatColor`
 <br />`org.bukkit.GameMode`
+<br />`org.bukkit.Material`
 
-`pers.neige.neigeitems.utils.ItemUtils`
+`pers.neige.neigeitems.utils.ActionUtils`
+<br />`pers.neige.neigeitems.utils.ConfigUtils`
+<br />`pers.neige.neigeitems.utils.FileUtils`
+<br />`pers.neige.neigeitems.utils.ItemUtils`
+<br />`pers.neige.neigeitems.utils.JsonUtils`
+<br />`pers.neige.neigeitems.utils.LangUtils`
+<br />`pers.neige.neigeitems.utils.PlayerUtils`
+<br />`pers.neige.neigeitems.utils.ScriptUtils`
 <br />`pers.neige.neigeitems.utils.SectionUtils`
+<br />`pers.neige.neigeitems.utils.StringUtils`
 <br />`pers.neige.neigeitems.manager.HookerManager`
 
 ### 单例

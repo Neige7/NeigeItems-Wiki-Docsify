@@ -315,3 +315,32 @@ ComboTest:
 ```
 - 'return'
 ```
+
+## JavaScript
+
+> 执行一段javascript代码
+
+```
+- 'js: player.sendMessage("你好")'
+```
+
+!> 不要在js动作中进行变量声明!!!
+<br />如: 
+<br />  test = 1
+<br />  var test = 1
+<br />  let test = 1
+<br />  const test = 1
+<br />这将产生严重的线程安全问题
+
+对此, 我提供了替代方案:
+将变量存放于默认提供的名为`variables`的HashMap如:
+
+```
+variables["test"] = 1
+```
+
+如果你想让一个变量传递到下一条js动作/condition中, 可以使用global
+
+```
+global["test"] = 1
+```
