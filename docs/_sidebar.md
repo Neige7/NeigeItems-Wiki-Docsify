@@ -10,6 +10,7 @@
   - [物品掉落](zhi-ling/wu-pin-diao-la.md)
   - [物品保存](zhi-ling/wu-pin-bao-cun.md)
   - [物品编辑](zhi-ling/wu-pin-bian-ji.md)
+  - [测试](zhi-ling/ce-shi.md)
   - [杂项](zhi-ling/za-xiang.md)
 
 - 物品
