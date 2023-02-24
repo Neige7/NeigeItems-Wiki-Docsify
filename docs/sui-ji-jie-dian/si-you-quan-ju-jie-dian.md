@@ -615,6 +615,8 @@ CheckTest:
 * `value` 待检查内容
 * `conditions` 待进行的系列条件匹配
 
+有关condition写法的详细信息, 查看[条件类型](wu-pin/wu-pin-dong-zuo/tiao-jian-lei-xing.md)
+
 本节点将把value作为变量传入condition, 按照列表顺序进行一系列匹配, 如果条件满足则返回result中的结果
 <br />如果conditions中的某一条没有配置condition, 形如`- "无匹配结果"`, 节点将直接返回`无匹配结果`
 <br />示例配置如下:
