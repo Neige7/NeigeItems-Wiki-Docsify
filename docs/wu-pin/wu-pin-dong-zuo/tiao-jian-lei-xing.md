@@ -295,6 +295,15 @@ condition: 'combo("ComboTest", ["left", "right", "left"])'
 
 默认500ms内点击算作连击, 可通过配置文件修改
 
+## 包含某字符(contains)
+
+> 字符串记得用引号包起来
+
+```
+# "测试测试"包含"测试"时返回true
+condition: '"测试测试".contains("测试")'
+```
+
 ## 玩家IP(address)
 
 > 字符串记得用引号包起来
