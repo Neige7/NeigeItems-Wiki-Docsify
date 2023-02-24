@@ -300,8 +300,11 @@ condition: 'combo("ComboTest", ["left", "right", "left"])'
 > 字符串记得用引号包起来
 
 ```
-# "测试测试"包含"测试"时返回true
+# 测试测试 包含 测试 时返回true
 condition: '"测试测试".contains("测试")'
+
+# 即时节点 <strings::测试_别测试了> 的解析值是否包含 测试
+condition: 'parse("<strings::测试_别测试了>").contains("测试")'
 ```
 
 ## 玩家IP(address)
